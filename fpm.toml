@@ -12,15 +12,10 @@ auto-examples = true
 library = false
 [preprocess]
 [preprocess.cpp]
-macros=["VERSION={version}"] # <== no space in front of first -D
-#macros=["NAME={name}","VERSION={version}"] 
-#macros=["NAME={name}","VERSION={version}","LICENSE={license}","MAINTAINER={maintainer}",
-#"AUTHOR={author}","COPYRIGHT={copyright}","DESCRIPTION={description}",
-#"CATEGORIES={categories}","KEYWORDS={keywords}","HOMEPAGE={homepage}","TARGETS={targets}"]
+macros=["NAME={name}","VERSION={version}","LICENSE={license}","MAINTAINER={maintainer}",
+"AUTHOR={author}","COPYRIGHT={copyright}","DESCRIPTION={description}",
+"CATEGORIES={categories}","KEYWORDS={keywords}","HOMEPAGE={homepage}","TARGETS={targets}"]
 
-#macros=["NAME={name}","VERSION={version}","LICENSE={license}","MAINTAINER={maintainer}",
-#"AUTHOR={author}","COPYRIGHT={copyright}","DESCRIPTION={description}",
-#"CATEGORIES={categories}","KEYWORDS={keywords}","HOMEPAGE={homepage}","TARGETS={targets}"]
 [[executable]]
 name="seeit"
 source-dir="app"
