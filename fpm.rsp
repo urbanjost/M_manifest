@@ -1,0 +1,4 @@
+@test
+#BUG/UNDOCUMENTED: --targets is required
+system fpm clean --all
+options run --target .. --compiler ifort --verbose --flag -Dname='"this is some text"' --verbose
