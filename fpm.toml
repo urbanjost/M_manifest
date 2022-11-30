@@ -21,3 +21,5 @@ name="seeit"
 source-dir="app"
 main="main.f90"
 [executable.dependencies]
+fpm = { git = "https://github.com/fortran-lang/fpm.git" }
+M_io = { git = "https://github.com/urbanjost/M_io.git" }

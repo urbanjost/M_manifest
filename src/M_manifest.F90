@@ -31,8 +31,17 @@ character(len=*),parameter,public :: manifest_keywords ='&
 character(len=*),parameter,public :: manifest_homepage ='&
 &HOMEPAGE&
 &'
-character(len=*),parameter,public :: manifest_targets ='&
-&TARGETS&
+character(len=*),parameter,public :: manifest_name1 ='&
+&NAME1&
+&'
+character(len=*),parameter,public :: manifest_value1 ='&
+&VALUE1&
+&'
+character(len=*),parameter,public :: manifest_name2 ='&
+&NAME2&
+&'
+character(len=*),parameter,public :: manifest_value2 ='&
+&VALUE2&
 &'
 
 public :: get_name
@@ -42,19 +51,20 @@ contains
 subroutine manifest_edition()
 character(len=*),parameter :: g='(*(g0,1x))'
 
-   print g, "project      :",manifest_name
-   print g, "name         :",get_name()
-   print g, "version      :",manifest_version
-   print g, "license      :",manifest_license
-   print g, "maintainer   :",manifest_maintainer
-   print g, "author       :",manifest_author
-   print g, "copyright    :",manifest_copyright
-   print g, "description  :",manifest_description
-   print g, "categories   :",manifest_categories
-   print g, "keywords     :",manifest_keywords
-   print g, "homepage     :",manifest_homepage
-   print g, "targets      :",manifest_targets
-   print g, "current time :",get_now()
+if(manifest_name.ne.'')        print g, "project      :",manifest_name
+if(get_name().ne.'')           print g, "name         :",get_name()
+if(manifest_version.ne.'')     print g, "version      :",manifest_version
+if(manifest_license.ne.'')     print g, "license      :",manifest_license
+if(manifest_maintainer.ne.'')  print g, "maintainer   :",manifest_maintainer
+if(manifest_author.ne.'')      print g, "author       :",manifest_author
+if(manifest_copyright.ne.'')   print g, "copyright    :",manifest_copyright
+if(manifest_description.ne.'') print g, "description  :",manifest_description
+if(manifest_categories.ne.'')  print g, "categories   :",manifest_categories
+if(manifest_keywords.ne.'')    print g, "keywords     :",manifest_keywords
+if(manifest_homepage.ne.'')    print g, "homepage     :",manifest_homepage
+if(manifest_value1.ne.'')      print g, "value1       :",manifest_value1
+if(manifest_value2.ne.'')      print g, "value2       :",manifest_value2
+if(get_now().ne.'')            print g, "current time :",get_now()
 end subroutine manifest_edition
 
 function get_name() result(name)
