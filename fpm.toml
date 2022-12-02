@@ -1,9 +1,14 @@
 name = "M_manifest"
 version = "0.1.0"
-license = "license"
+license = "MIT"
 author = "John S. Urban"
 maintainer = "urbanjost@comcast.net"
 copyright = "Copyright 2022, John S. Urban"
+keywords = ["fortran","toml","fpm"]
+description = "experiments with pre-processing and toml-f"
+categories = ["fortran","fpm"]
+homepage = ["https://github.com/urbanjost/M_manifest"]
+
 [build]
 auto-executables = true
 auto-tests = true
