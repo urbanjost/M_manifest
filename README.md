@@ -2,6 +2,10 @@
 
 Test module for exercising a proposed change to fpm
 
+For discussion at
+
+   https://github.com/fortran-lang/fpm/issues/810
+
 ```text
 app
 /     fpm-describe.f90  -- create plugin to show keywords "fpm describe license"
