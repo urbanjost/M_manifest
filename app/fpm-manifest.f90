@@ -129,8 +129,8 @@ textblock=[ CHARACTER(LEN=128) :: &
 '']
    write(*,g0)textblock
    write(*,g0)'end module '//trim(name)//'_manifest'
-   write(*,g0)'!program testit, only : manifest_edition'
-   write(*,g0)'!use '//trim(name)//'_manifest'
+   write(*,g0)'!program testit'
+   write(*,g0)'!use '//trim(name)//'_manifest, only : manifest_edition'
    write(*,g0)'!call manifest_edition()'
    write(*,g0)'!end program testit'
    call table%destroy
